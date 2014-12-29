@@ -30,7 +30,7 @@ public class LinkedListNode{
     }
   }
 
-  public void add(int data){
+  public LinkedListNode add(int data){
     LinkedListNode node = new LinkedListNode();
     node.data = data;
     LinkedListNode current = this;
@@ -38,6 +38,7 @@ public class LinkedListNode{
       current = current.next;
     }
     current.setNext(node);
+    return node;
   }
 
   public String printForward(){
