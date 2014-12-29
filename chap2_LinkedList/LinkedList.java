@@ -1,5 +1,5 @@
 
-public class LinkedList{
+public class RemoveDuplicate{
   public static void main(String[] args){
     System.out.println("Hi");
     LinkedListNode n = new LinkedListNode();

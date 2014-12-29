@@ -7,12 +7,6 @@ public class LinkedListNode{
   public LinkedListNode next;
   public LinkedListNode pre;
 
-  /* Before : no last field
-  *  After  : has last field
-  *  Reason : maybe it will be useful
-  */
-  public LinkedListNode last;
-
   // Constructor
   public LinkedListNode(int data, LinkedListNode n, LinkedListNode p){
     data = data;
@@ -24,9 +18,6 @@ public class LinkedListNode{
 
   public void setNext(LinkedListNode n){
     next = n;
-    if (this == last){
-      last = n;
-    }
     if(n != null && n.pre != this){
       n.setPre(this);
     }
@@ -37,6 +28,16 @@ public class LinkedListNode{
     if (p != null && p.next != this){
       p.setNext(this);
     }
+  }
+
+  public void add(int data){
+    LinkedListNode node = new LinkedListNode();
+    node.data = data;
+    LinkedListNode current = this;
+    while(current.next != null){
+      current = current.next;
+    }
+    current.setNext(node);
   }
 
   public String printForward(){
