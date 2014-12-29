@@ -41,6 +41,18 @@ public class LinkedListNode{
     return node;
   }
 
+  // Append a LinkedListNode to the last elment
+  public void append(LinkedListNode n){
+    // append null at the end of LinkedList is nonsense
+    if (n == null) return;
+    LinkedListNode head = this;
+    while(head.next != null){
+      head = head.next;
+    }
+
+    head.setNext(n);
+  }
+
   public String printForward(){
     if(next != null){
       return data + "->" + next.printForward();
