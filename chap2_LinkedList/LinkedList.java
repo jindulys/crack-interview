@@ -1,4 +1,4 @@
-public class LinkedList{
+public class LinkedListNode{
   public static void main(String[] args){
     System.out.println("");
   }
