@@ -1,5 +1,3 @@
-package YSCILibrary;
-
 public class LinkedListNode{
   /* Before : no public access control
   *  After  : has public access control
