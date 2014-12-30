@@ -9,7 +9,7 @@ public class LinkedListNode{
 
   // Constructor
   public LinkedListNode(int data, LinkedListNode n, LinkedListNode p){
-    data = data;
+    this.data = data;
     setNext(n);
     setPre(p);
   }
@@ -53,6 +53,20 @@ public class LinkedListNode{
     head.setNext(n);
   }
 
+  // Return a reversed LinkedListNode, break the structure of passed in.
+  public static LinkedListNode reverse(LinkedListNode n){
+    if (n == null) return null;
+    LinkedListNode n1 = n.clone();
+    LinkedListNode result = null;
+    while (n1 != null){
+      LinkedListNode toProcessed = n1.next;
+      n1.next = result;
+      result = n1;
+      n1 = toProcessed;
+    }
+    return result;
+  }
+
   public String printForward(){
     if(next != null){
       return data + "->" + next.printForward();
@@ -67,6 +81,7 @@ public class LinkedListNode{
     if(next != null) {
       nextNode = next.clone();
     }
-    return new LinkedListNode(data,nextNode,null);
+    LinkedListNode result = new LinkedListNode(this.data, nextNode, null);
+    return result;
   }
 }
