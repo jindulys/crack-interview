@@ -83,6 +83,7 @@ public class TreeNode {
     TreeNode n = new TreeNode(arr[mid]);
     n.setLeftChild(createMinimalBST(arr, start, mid - 1));
     n.setRightChild(createMinimalBST(arr, mid + 1, end));
+    n.size = end - start + 1;
     return n;
   }
 
