@@ -91,6 +91,18 @@ public class TreeNode {
     return createMinimalBST(arr, 0, arr.length-1);
   }
 
+  public static String inorderString(TreeNode t) {
+      if (t == null) return "0";
+      String result = "";
+      if (t.left != null) {
+          result += inorderString(t.left);
+      }
+      result += t.data;
+      if (t.right != null) {
+          result += inorderString(t.right);
+      }
+      return result;
+  }
 
   public void print() {
     BTreePrinter.printNode(this);
