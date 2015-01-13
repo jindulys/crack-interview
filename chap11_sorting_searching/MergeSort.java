@@ -64,7 +64,7 @@ public class MergeSort {
     }
 
     private static boolean isSorted(Comparable[] a, int lo, int hi) {
-        for(int i = lo+1; i < hi; i++) {
+        for(int i = lo+1; i <= hi; i++) {
             if(less(a[i],a[i-1])) return false;
         }
         return true;

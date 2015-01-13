@@ -44,6 +44,6 @@ public class Tower {
             towers[0].addTop(i);
         }
 
-        towers[0].moveDisks(2, towers[2], towers[1]);
+        towers[0].moveDisks(6, towers[2], towers[1]);
     }
 }
