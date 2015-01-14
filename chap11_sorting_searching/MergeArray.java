@@ -42,8 +42,6 @@ public class MergeArray {
             k++;
         }
 
-        System.out.println("i is : " + i);
-        System.out.println("j is : " + j);
 
         if (j == Sl) {
             // case 1: Short array reaches the end
@@ -113,7 +111,7 @@ public class MergeArray {
             System.out.println("These two arrays are different!");
         }
 
-        mergeArrayAns(a, b);
+        mergeArray(a, b);
         if (equalArray(a, answer)) {
             System.out.println("These two arrays are equal!");
         } else {
